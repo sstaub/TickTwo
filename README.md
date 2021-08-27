@@ -22,7 +22,7 @@ You can change the number of repeats of the callbacks, if repeats is 0 the ticke
 ## New in v2.1
 - You can change the interval time to microseconds.
 ```cpp
-Ticker tickerObject(callbackFunction, 100, 0, MICROS_MICROS) // interval is now 100us
+TickTwo tickerObject(callbackFunction, 100, 0, MICROS_MICROS) // interval is now 100us
 ```
 - smaller improvments
 
@@ -30,14 +30,14 @@ Ticker tickerObject(callbackFunction, 100, 0, MICROS_MICROS) // interval is now 
 - You can determine the number of repeats, instead of modes.
 - The internal resolution is now **micros()**, this works with intervals up to 70 minutes. For longer intervals you can change the resolution to **millis()**.
 ```cpp
-Ticker tickerObject(callbackFunction, 1000, 0, MILLIS)
+TickTwo tickerObject(callbackFunction, 1000, 0, MILLIS)
 ```
 - unified data types and smaller improvments
 
 ## Installation
 
-1. "Download":https://github.com/sstaub/Ticker/archive/master.zip the Master branch from GitHub.
-2. Unzip and modify the folder name to "Ticker"
+1. "Download":https://github.com/sstaub/TickTwo/archive/master.zip the Master branch from GitHub.
+2. Unzip and modify the folder name to "TickTwo"
 3. Move the modified folder on your Library folder (On your `Libraries` folder inside Sketchbooks or Arduino software).
 
 
