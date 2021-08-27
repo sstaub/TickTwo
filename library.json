@@ -1,0 +1,14 @@
+{
+  "name": "TickTwo",
+  "keywords": "Ticker, Timer, Threads",
+  "description": "A library for creating Tickers which can call repeating functions. Replaces delay() with non-blocking functions. Recommanded for ESP and Arduino boards with mbed behind.",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/sstaub/TickTwo"
+  },
+  "version": "4.4.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
+
