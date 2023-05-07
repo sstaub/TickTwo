@@ -103,6 +103,7 @@ uint32_t TickTwo::elapsed() {
 	}
 
 uint32_t TickTwo::remaining() {
+	if (timer < elapsed()) return 0;
 	return timer - elapsed();
 	}
 
