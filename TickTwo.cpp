@@ -102,8 +102,7 @@ uint32_t TickTwo::elapsed() {
 	else return micros() - lastTime;
 	}
 
-uint32_t TickTwo::remaining() {
-	if (timer < elapsed()) return 0;
+int32_t TickTwo::remaining() {
 	return timer - elapsed();
 	}
 

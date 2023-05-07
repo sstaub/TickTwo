@@ -126,10 +126,10 @@ public:
 
 	/** time remaining to the next tick
 	 *
-	 * @returns the remaining time to the next tick in ms or us depending from mode
+	 * @returns the remaining time to the next tick in ms or us depending from mode. If the execution is past due, it will return a negative value.
 	 *
 	 */
-	uint32_t remaining();
+	int32_t remaining();
 
 	/** get the state of the ticker
 	 *
