@@ -2,7 +2,7 @@
 
 **This library is a rebrand of the Ticker library, because of naming conflicts with ESP based microcontrollers which is also a problem with mbed based Arduino devices like Raspberry Pi Pico or Arduino Nano RP2040 connect and Potenta boards**
 
-The **Arduino TickTwo Library** allows you to create easily Ticker callbacks, which can call a function in a predetermined interval. 
+The **Arduino TickTwo Library** allows you to create easily Ticker callbacks, which can call a function in a predetermined interval.
 You can change the number of repeats of the callbacks, if repeats is 0 the ticker runs in endless mode. Works like a "thread", where a secondary function will run when necessary. The library use no interupts of the hardware timers and works with the **micros() / millis()** function. You are not (really) limited in the number of Tickers.
 
 ## New in v4.0
@@ -24,7 +24,7 @@ You can change the number of repeats of the callbacks, if repeats is 0 the ticke
 ```cpp
 TickTwo tickerObject(callbackFunction, 100, 0, MICROS_MICROS) // interval is now 100us
 ```
-- smaller improvments
+- smaller improvements
 
 ## New in v2.0
 - You can determine the number of repeats, instead of modes.
@@ -32,7 +32,7 @@ TickTwo tickerObject(callbackFunction, 100, 0, MICROS_MICROS) // interval is now
 ```cpp
 TickTwo tickerObject(callbackFunction, 1000, 0, MILLIS)
 ```
-- unified data types and smaller improvments
+- unified data types and smaller improvements
 
 ## Installation
 
@@ -68,7 +68,7 @@ If you use delay(), the Ticker will be ignored! You cannot use delay() command w
 
 ## Example
 
-Complete example. Here we created five timers, you can run it and test the result in the Serial monitor and the on board LED.
+Complete example. Here we created five timers, you can run it and test the result in the Serial monitor and the onboard LED.
 
 ```cpp
 #include "TickTwo.h"
@@ -116,7 +116,7 @@ void printCounter() {
   }
 
 void printCountdown() {
-  Serial.print("Countdowm ");
+  Serial.print("Countdown ");
   Serial.println(5 - timer3.counter());
   }
 
@@ -159,8 +159,8 @@ TickTwo::TickTwo(fptr callback, uint32_t timer, uint16_t repeats, interval_t mod
 Creates a TickTwo object
 
 - **callback** for the function name you want to call
-- **timer** set the interval time in ms or us depending from mode
-- **repeats** set the number of repeats the callback should executed, 0 is endless (default)
+- **timer** set the interval time in ms or us depending on mode
+- **repeats** set the number of repeats the callback should be executed, 0 is endless (default)
 - **mode** set the interval resolution to MILLIS, MICROS_MICROS or MICROS (default)
 
 **Example**
@@ -243,7 +243,7 @@ timer.stop();
 void TickTwo::update()
 ```
 
-Must to be called in the main while() loop, it will check the Ticker, and if necessary, will run the callback.
+Has to be called in the main while() loop, it will check the Ticker, and if necessary, will run the callback.
 
 **Example**
 
@@ -259,9 +259,9 @@ while(1) {
 void TickTwo::interval(uint32_t timer)
 ```
 
-Changes the interval time of the Ticker. Depending from the mode it can millis or micro seconds.
+Changes the interval time of the Ticker. Depending on the mode it can millis or micro seconds.
 
-- **timer** set the interval time in ms or us depending from mode
+- **timer** set the interval time in ms or us depending on mode
 
 
 **Example**
@@ -276,7 +276,7 @@ timer.interval(500); // new interval time
 uint32_t TickTwo::interval()
 ```
 
-Get the interval time of the Ticker. Depending from the mode it can millis or micro seconds.
+Get the interval time of the Ticker. Depending on the mode it can millis or micro seconds.
 
 **Example**
 
