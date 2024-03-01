@@ -76,7 +76,7 @@ bool TickTwo::tick() {
 	if (!enabled)	return false;	
 	uint32_t currentTime = (resolution == MILLIS) ? millis() : micros();
  	if ((currentTime - lastTime) >= timer) {
- 		lastTime = currentTime;
+ 		lastTime += timer;
  		if (repeat - counts == 1 && counts != 0xFFFFFFFF) {
 			enabled = false;
 			status = STOPPED;
